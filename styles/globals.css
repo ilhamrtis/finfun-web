@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* normal */
+  @font-face {
+    font-family: "Adelle Sans";
+    src: url("/fonts/AdelleSans-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+  }
+
+  /* semibold */
+  @font-face {
+    font-family: "Adelle Sans";
+    src: url("/fonts/AdelleSans-Semibold.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+  }
+
+  .telegram-icon {
+    width: 25px;
+    height: 25px;
+    background-size: contain!important;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png?20220101141644');
+    background-repeat: no-repeat;
+  }
+
+  .google-icon {
+    width: 25px;
+    height: 25px;
+    background-size: contain!important;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1920px-Google_%22G%22_logo.svg.png?20230822192911');
+    background-repeat: no-repeat;
+  }
+}
+
+@layer utilities {
+  @media (min-width: 768px) {
+    html {
+      font-size: 14px; /* Force smaller font size */
+    }
+
+    body {
+      width: 375px;
+      margin: 0 auto; /* Centered on larger screens */
+    }
+  }
+}
+
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Adelle Sans", sans-serif;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: #fff; /* Soft blue */
+  }
+}
