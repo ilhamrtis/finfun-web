@@ -22,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 
     return {
       props: {},
-      redirect: { destination: "/dashboard", permanent: false },
+      redirect: { destination: "/home", permanent: false },
     };
   } catch (error) {
     return { props: {} };
@@ -33,7 +33,7 @@ export default function LoginPage() {
   const {
     initOAuth,
   } = useLoginWithOAuth({
-    onComplete: () => router.push("/dashboard"),
+    onComplete: () => router.push("/home"),
     onError: (error) => {
       console.log(error);
     },
@@ -47,7 +47,7 @@ export default function LoginPage() {
 
   const router = useRouter();
   const { login } = useLogin({
-    onComplete: () => router.push("/dashboard"),
+    onComplete: () => router.push("/home"),
   });
 
   return (

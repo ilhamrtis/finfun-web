@@ -5,7 +5,7 @@ interface TopNavBarProps {
   onCreateClick: () => void;
 }
 
-const TopNavBar: React.FC<TopNavBarProps> = ({ points, onCreateClick }) => {
+const TopNavBar: React.FC<TopNavBarProps> = ({  }) => {
   return (
     <div className="flex items-center justify-between p-4">
       {/* Left: Mini Logo */}
@@ -13,7 +13,7 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ points, onCreateClick }) => {
         <img src="/images/mini-finfun.svg" alt="Finfun Logo" className="h-14 w-auto" />
       </div>
 
-      {/* Right: Create Button and Points */}
+      {/* Right: Create Button and Points 
       <div className="flex items-center space-x-2">
         <button
           onClick={onCreateClick}
@@ -26,6 +26,7 @@ const TopNavBar: React.FC<TopNavBarProps> = ({ points, onCreateClick }) => {
             <span className="font-bold">{points}</span> Points
         </div>
       </div>
+      */}
     </div>
   );
 };
